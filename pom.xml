@@ -63,7 +63,7 @@
                             <outputDirectory>${basedir}/target/apiproxy</outputDirectory>
                             <resources>
                                 <resource>
-                                    <directory>${basedir}</directory>
+                                    <directory>apiproxy</directory>
                                 </resource>
                             </resources>
                         </configuration>
@@ -107,8 +107,8 @@
                             <ignoreResultFailures>true</ignoreResultFailures>
                             <suppressJMeterOutput>false</suppressJMeterOutput>
                                 <propertiesUser>
-                                    <testData>order_test.csv</testData>
-                                    <threadNum>2</threadNum>
+                                    <testData>JmeterTest_all.csv</testData>
+                                    <threadNum>1</threadNum>
                                     <rampUpPeriodSecs>5</rampUpPeriodSecs>
                                     <loopCount>1</loopCount>
                                 </propertiesUser>
