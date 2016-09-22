@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<AssignMessage async="false" continueOnError="false" enabled="true" name="AssignMessage-PTService-Fail">
+    <DisplayName>AssignMessage-PTService-Fail</DisplayName>
+    <Properties/>
+    <Set>
+        <Headers>
+        </Headers>
+        <Payload contentType="application/json">\{"code":"{settings.messages.ptServiceFailCode}","message":"{settings.messages.ptServiceFailMsg}" }</Payload>
+        <StatusCode>{settings.messages.ptServiceFailCode}</StatusCode>
+        <ReasonPhrase>{settings.messages.ptServiceFailMsg}</ReasonPhrase>
+    </Set>
+    <IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
+    <AssignTo createNew="false" transport="http" type="request"/>
+</AssignMessage>

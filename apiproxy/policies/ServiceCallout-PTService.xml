@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ServiceCallout async="false" continueOnError="false" enabled="true" name="ServiceCallout-PTService">
+    <DisplayName>ServiceCallout-PTService</DisplayName>
+    <Properties/>
+    <Request clearPayload="true" variable="myRequest">
+        <Add>
+            <Headers>
+                <Header name="Authorization">bearer {jwt_jwt}</Header>
+            </Headers>
+        </Add>
+        <IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
+    </Request>
+    <Response>calloutResponse</Response>
+    <Timeout>30000</Timeout>
+    <HTTPTargetConnection>
+        <Properties/>
+        <SSLInfo>
+            <Enabled>true</Enabled>
+        </SSLInfo>
+        <!--<URL>https://10.10.10.10:9095</URL>-->
+        <!--<URL>https://{url}/pizzaTracker/api/v1/subscriptions/{subscriptionId}</URL>-->
+        <URL>https://{url}/api/v1/orders/{orderId}/status?subId={subscriptionId}</URL>
+    </HTTPTargetConnection>
+</ServiceCallout>
