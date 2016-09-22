@@ -19,7 +19,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>apigee</groupId>
-	<artifactId>SubscriptionIdv2</artifactId>
+	<artifactId>PT</artifactId>
 	<packaging>pom</packaging>
 	<version>1.0</version>
     <pluginRepositories>
@@ -63,7 +63,7 @@
                             <outputDirectory>${basedir}/target/apiproxy</outputDirectory>
                             <resources>
                                 <resource>
-                                    <directory>apiproxy</directory>
+                                    <directory>${basedir}</directory>
                                 </resource>
                             </resources>
                         </configuration>
@@ -125,12 +125,12 @@
 <!-- This is where you add the environment specific properties under various profile names -->
  <profiles>
         <profile>
-            <id>dev1</id>
+            <id>test</id>
             <properties>
-                <org>papajohns</org>  <!-- default org, replace with dafault org to avoid passing parameter e.g. -Dorg testmyapi -->
+                <org>anumanasa</org>  <!-- default org, replace with dafault org to avoid passing parameter e.g. -Dorg testmyapi -->
                 <options>validate</options>  <!-- default org, replace with dafault org to avoid passing parameter e.g. -Dorg testmyapi -->
-                <apigee.profile>dev1</apigee.profile>
-                <apigee.env>dev1</apigee.env>
+                <apigee.profile>test</apigee.profile>
+                <apigee.env>test</apigee.env>
                 <apigee.hosturl>https://api.enterprise.apigee.com</apigee.hosturl>
                 <apigee.apiversion>v1</apigee.apiversion>
                 <apigee.org>${org}</apigee.org>
@@ -144,7 +144,7 @@
         <profile>
             <id>prod</id>
             <properties>
-                <org>papajohns</org>  <!-- default org, replace with dafault org to avoid passing parameter e.g. -Dorg testmyapi -->
+                <org>anumanasa</org>  <!-- default org, replace with dafault org to avoid passing parameter e.g. -Dorg testmyapi -->
                 <options>validate</options>  <!-- default org, replace with dafault org to avoid passing parameter e.g. -Dorg testmyapi -->
                 <apigee.profile>prod</apigee.profile>
                 <apigee.env>prod</apigee.env>
